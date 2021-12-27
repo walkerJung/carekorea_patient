@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native";
+import React from "react";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
 import { careTheme } from "../../contents";
 
@@ -9,14 +9,14 @@ const slides = [
     title: "나만의 전문 간병인, ",
     bold: "매칭",
     text: "질병별로 맞춤화된\n전문 간병인을 찾아보세요!",
-    image: require("../../assets/img/intro.png"),
+    image: require("../../assets/img/intro01.png"),
   },
   {
     key: "2",
     title: "손쉽게 찾아주는 간병, ",
     bold: "서비스",
     text: "개인 간병 또는 공동 간병\n간병이 필요한 환자와 매칭!",
-    image: require("../../assets/img/intro.png"),
+    image: require("../../assets/img/intro02.png"),
   },
 ];
 
@@ -26,25 +26,21 @@ function Intro({ navigation }) {
       <View
         style={{
           flex: 1,
-          backgroundColor: "white",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
-        <Image
+        <ImageBackground
           source={item.image}
-          style={{
-            marginBottom: 30,
-            resizeMode: "contain",
-            height: 237,
-            width: 237,
-          }}
-        />
-        <Text style={styles.title}>
-          {item.title}
-          <Text style={styles.bold}>{item.bold}</Text>
-        </Text>
-        <Text style={styles.text}>{item.text}</Text>
+          resizeMode="cover"
+          style={styles.image}
+        >
+          <View style={styles.textBox}>
+            <Text style={styles.title}>
+              {item.title}
+              <Text style={styles.bold}>{item.bold}</Text>
+            </Text>
+            <Text style={styles.text}>{item.text}</Text>
+          </View>
+        </ImageBackground>
       </View>
     );
   };
@@ -96,20 +92,31 @@ function Intro({ navigation }) {
 export default Intro;
 
 const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+    paddingHorizontal: "5%",
+    justifyContent: "flex-end",
+  },
+  textBox: {
+    paddingTop: "20%",
+    paddingBottom: "25%",
+  },
   title: {
-    color: "#333",
+    color: "#fff",
     fontSize: 22,
-    textAlign: "center",
+    // textAlign: "center",
   },
   bold: {
     fontWeight: "bold",
     marginLeft: 5,
+    fontSize: 28,
   },
   text: {
     marginTop: 15,
-    color: "#8D8D8D",
-    textAlign: "center",
-    fontSize: 18,
+    color: "#fff",
+    lineHeight: 24,
+    // textAlign: "center",
+    fontSize: 16,
     fontWeight: "200",
     marginBottom: 50,
   },
