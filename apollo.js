@@ -48,8 +48,8 @@ export const checkFirstLaunch = async () => {
 };
 
 const httpLink = createUploadLink({
-  // uri: "http://3.36.22.165:4000/graphql",
-  uri: "http://api.care-korea.kr/graphql",
+  uri: "http://3.36.22.165:4000/graphql",
+  // uri: "http://api.care-korea.kr/graphql",
 });
 const authLink = setContext((_, { headers }) => {
   return {
