@@ -2,7 +2,7 @@
   "expo": {
     "name": "CareKorea_patient",
     "slug": "CareKorea_patient",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -22,7 +22,7 @@
         "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
       },
       "bundleIdentifier": "com.wezoncoop.patient",
-      "buildNumber": "0.0.1"
+      "buildNumber": "0.0.5"
     },
     "android": {
       "adaptiveIcon": {
@@ -35,8 +35,8 @@
         "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.RECORD_AUDIO"
       ],
-      "package": "com.wezoncoop.patient",
-      "versionCode": 1
+      "package": "com.wezoncoop.carekorea_patient",
+      "versionCode": 0
     },
     "web": {
       "favicon": "./assets/favicon.png"
