@@ -44,7 +44,6 @@ export default function App() {
 
   useEffect(() => {
     preLoad();
-    logUserOut();
   }, []);
 
   return loaded ? (
