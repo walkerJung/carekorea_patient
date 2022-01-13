@@ -167,6 +167,7 @@ export default function ApplyFormDetail({ route, navigation }) {
               { label: "콧줄 식사케어 ", value: "콧줄 식사케어 " },
               { label: "뱃줄 식사케어", value: "뱃줄 식사케어" },
               { label: "전적으로 먹여줌", value: "전적으로 먹여줌" },
+              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -202,6 +203,7 @@ export default function ApplyFormDetail({ route, navigation }) {
               { label: "이동변기 케어", value: "이동변기 케어" },
               { label: "소변통 케어", value: "소변통 케어" },
               { label: "관장", value: "관장" },
+              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -234,6 +236,7 @@ export default function ApplyFormDetail({ route, navigation }) {
               { label: "목 석션", value: "목 석션" },
               { label: "코 석션", value: "코 석션" },
               { label: "입 석션", value: "입 석션" },
+              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -266,6 +269,7 @@ export default function ApplyFormDetail({ route, navigation }) {
               { label: "휠체어 이동케어", value: "휠체어 이동케어" },
               { label: "지팡이 보행 이동케어", value: "지팡이 보행 이동케어" },
               { label: "워커보행 이동케어", value: "워커보행 이동케어" },
+              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -301,6 +305,7 @@ export default function ApplyFormDetail({ route, navigation }) {
               },
               { label: "체위(자세)변경", value: "체위(자세)변경" },
               { label: "욕창관리", value: "욕창관리" },
+              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -333,6 +338,7 @@ export default function ApplyFormDetail({ route, navigation }) {
               { label: "전적으로 도와줌", value: "전적으로 도와줌" },
               { label: "화장실에서 도와줌", value: "화장실에서 도와줌" },
               { label: "침상에서 도와줌", value: "침상에서 도와줌" },
+              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {

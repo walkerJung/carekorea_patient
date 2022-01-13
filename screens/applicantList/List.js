@@ -61,7 +61,9 @@ export default function ApplicantList({ route, navigation }) {
                     <PriceTxt>
                       간병비
                       <NumberFormat
-                        value={item.caregiverCost}
+                        value={Math.floor(
+                          item.caregiverCost / 9 + item.caregiverCost
+                        )}
                         displayType={"text"}
                         thousandSeparator={true}
                         suffix={"원"}
