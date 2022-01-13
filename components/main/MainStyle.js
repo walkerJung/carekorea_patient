@@ -12,8 +12,10 @@ export const MainHedaer = styled.View`
   justify-content: space-between;
 `;
 export const MainHedaerTxt = styled.Text`
-  font-size: 13px;
-  color: #979797;
+  font-size: 16px;
+  color: ${careTheme.COLORS.PRIMARY};
+  font-weight: bold;
+  opacity: 0.9;
 `;
 export const MainBanner = styled.View`
   position: relative;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Linking } from "react-native";
 import styled from "styled-components/native";
 import Icon from "react-native-vector-icons/Ionicons";
 export const Container = styled.View`
@@ -42,7 +43,7 @@ export const MypageList = ({ onPress, title }) => {
   );
 };
 export const Tell = ({ title, number }) => {
-  const TellBox = styled.View`
+  const TellBox = styled.TouchableOpacity`
     padding: 15px 20px;
     background-color: #c4efcd;
     border-radius: 8px;
@@ -62,8 +63,14 @@ export const Tell = ({ title, number }) => {
     color: #054a13;
     text-align: center;
   `;
+
   return (
-    <TellBox>
+    <TellBox
+      onPress={() => {
+        Linking.openURL(`tel:${number}`);
+      }}
+      activeOpacity={0.8}
+    >
       <TellTxt>{title}</TellTxt>
       <TellNum>{number}</TellNum>
     </TellBox>
