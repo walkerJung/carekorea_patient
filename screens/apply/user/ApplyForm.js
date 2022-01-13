@@ -30,6 +30,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { careTheme } from "../../../contents";
 import { useForm } from "react-hook-form";
 import Postcode from "@actbase/react-daum-postcode";
+import AddressModal from "../../../components/modal/AddressModal";
 
 Date.prototype.format = function (f) {
   if (!this.valueOf()) return " ";
@@ -454,11 +455,18 @@ export default function ApplyForm({ navigation }) {
             </RightBtnBox>
           </FlexRow>
           {isModal && (
-            <Postcode
-              style={{ width: 320, height: 320 }}
-              jsOptions={{ animation: true }}
-              onSelected={(data) => handleAddress(data)}
-            />
+            <>
+              <AddressModal isVisible={isModal} onPress={() => setModal(false)}>
+                <Postcode
+                  style={{ width: "100%", height: "100%" }}
+                  jsOptions={{ animation: true, hideMapBtn: true }}
+                  onSelected={(data) => {
+                    handleAddress(data);
+                    setModal(false);
+                  }}
+                />
+              </AddressModal>
+            </>
           )}
           <FormInput
             inputRef={addressDetailRef}

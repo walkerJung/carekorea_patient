@@ -41,6 +41,7 @@ import Postcode from "@actbase/react-daum-postcode";
 import PrivacyModal from "../../../components/modal/PrivacyModal";
 import ProvisionModal from "../../../components/modal/ProvisionModal";
 import ConfirmModal from "../../../components/modal/ConfirmModal";
+import AddressModal from "../../../components/modal/AddressModal";
 
 export default function CaregiverRegister({ navigation }) {
   const [allProvision, setAllProvision] = useState(false);
@@ -379,11 +380,18 @@ export default function CaregiverRegister({ navigation }) {
           </FlexRow>
 
           {isModal && (
-            <Postcode
-              style={{ width: 320, height: 320 }}
-              jsOptions={{ animation: true }}
-              onSelected={(data) => handleAddress(data)}
-            />
+            <>
+              <AddressModal isVisible={isModal} onPress={() => setModal(false)}>
+                <Postcode
+                  style={{ width: "100%", height: "100%" }}
+                  jsOptions={{ animation: true, hideMapBtn: true }}
+                  onSelected={(data) => {
+                    handleAddress(data);
+                    setModal(false);
+                  }}
+                />
+              </AddressModal>
+            </>
           )}
           <FormInput
             placeholder="상세주소"

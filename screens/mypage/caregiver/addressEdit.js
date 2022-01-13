@@ -23,6 +23,7 @@ import { useMutation } from "@apollo/client";
 import { USER_DETAIL_QUERY, EDIT_CAREGIVERINFO_MUTATION } from "../../query";
 import SectionLayout from "../../../components/layout/SectionLayout";
 import ConfirmModal from "../../../components/modal/ConfirmModal";
+import AddressModal from "../../../components/modal/AddressModal";
 
 export default function EditAddressCaregiver({ route, navigation }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -133,11 +134,18 @@ export default function EditAddressCaregiver({ route, navigation }) {
             </RightBtnBox>
           </FlexRow>
           {isModal && (
-            <Postcode
-              style={{ width: 320, height: 320 }}
-              jsOptions={{ animation: true }}
-              onSelected={(data) => handleAddress(data)}
-            />
+            <>
+              <AddressModal isVisible={isModal} onPress={() => setModal(false)}>
+                <Postcode
+                  style={{ width: "100%", height: "100%" }}
+                  jsOptions={{ animation: true, hideMapBtn: true }}
+                  onSelected={(data) => {
+                    handleAddress(data);
+                    setModal(false);
+                  }}
+                />
+              </AddressModal>
+            </>
           )}
           <FormInput
             placeholder={route.params.addressDetail}
