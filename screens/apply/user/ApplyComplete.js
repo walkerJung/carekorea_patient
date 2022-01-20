@@ -24,7 +24,7 @@ export default function ApplyCompleteUser({ navigation }) {
 
       <SubmitBtn
         text="확인"
-        onPress={() => navigation.navigate("PatientMainScreen")}
+        onPress={() => navigation.navigate("ProgressHistoryUser")}
       />
     </Complete>
   );

@@ -681,6 +681,7 @@ export default function ApplyForm({ navigation }) {
             value={getValues("nursingGrade")}
             onValueChange={(value) => handleSelectBox("nursingGrade", value)}
             items={[
+              { label: "없습니다", value: "없습니다" },
               { label: "1등급", value: "1등급" },
               { label: "2등급", value: "2등급" },
               { label: "3등급", value: "3등급" },

@@ -164,10 +164,10 @@ export default function ApplyFormDetail({ route, navigation }) {
             value={getValues("needMealCare")}
             onValueChange={(value) => handleSelectBox("needMealCare", value)}
             items={[
-              { label: "콧줄 식사케어 ", value: "콧줄 식사케어 " },
+              { label: "스스로 할 수 있음", value: "스스로 할 수 있음" },
+              { label: "콧줄 식사케어", value: "콧줄 식사케어" },
               { label: "뱃줄 식사케어", value: "뱃줄 식사케어" },
               { label: "전적으로 먹여줌", value: "전적으로 먹여줌" },
-              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -197,13 +197,13 @@ export default function ApplyFormDetail({ route, navigation }) {
             value={getValues("needUrineCare")}
             onValueChange={(value) => handleSelectBox("needUrineCare", value)}
             items={[
+              { label: "스스로 할 수 있음", value: "스스로 할 수 있음" },
               { label: "소변주머니 케어", value: "소변주머니 케어" },
               { label: "장루 케어", value: "장루 케어" },
               { label: "기저귀 케어", value: "기저귀 케어" },
               { label: "이동변기 케어", value: "이동변기 케어" },
               { label: "소변통 케어", value: "소변통 케어" },
               { label: "관장", value: "관장" },
-              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -236,7 +236,7 @@ export default function ApplyFormDetail({ route, navigation }) {
               { label: "목 석션", value: "목 석션" },
               { label: "코 석션", value: "코 석션" },
               { label: "입 석션", value: "입 석션" },
-              { label: "없음", value: "없음" },
+              { label: "필요없음", value: "필요없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -266,10 +266,14 @@ export default function ApplyFormDetail({ route, navigation }) {
             value={getValues("needMoveCare")}
             onValueChange={(value) => handleSelectBox("needMoveCare", value)}
             items={[
+              { label: "스스로 할 수 있음", value: "스스로 할 수 있음" },
+              {
+                label: "외상환자 (움직이지 못함)",
+                value: "외상환자 (움직이지 못함)",
+              },
               { label: "휠체어 이동케어", value: "휠체어 이동케어" },
               { label: "지팡이 보행 이동케어", value: "지팡이 보행 이동케어" },
               { label: "워커보행 이동케어", value: "워커보행 이동케어" },
-              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
@@ -299,6 +303,8 @@ export default function ApplyFormDetail({ route, navigation }) {
             value={getValues("needBedCare")}
             onValueChange={(value) => handleSelectBox("needBedCare", value)}
             items={[
+              { label: "스스로 할 수 있음", value: "스스로 할 수 있음" },
+              { label: "낙상주의 관찰환자", value: "낙상주의 관찰환자" },
               {
                 label: "침대에서 휠체어 이동케어",
                 value: "침대에서 휠체어 이동케어",
@@ -335,10 +341,10 @@ export default function ApplyFormDetail({ route, navigation }) {
             value={getValues("needHygieneCare")}
             onValueChange={(value) => handleSelectBox("needHygieneCare", value)}
             items={[
+              { label: "스스로 할 수 있음", value: "스스로 할 수 있음" },
               { label: "전적으로 도와줌", value: "전적으로 도와줌" },
               { label: "화장실에서 도와줌", value: "화장실에서 도와줌" },
               { label: "침상에서 도와줌", value: "침상에서 도와줌" },
-              { label: "없음", value: "없음" },
             ]}
             doneText="선택"
             Icon={() => {
