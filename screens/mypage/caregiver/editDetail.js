@@ -341,6 +341,7 @@ export default function EditDetailCaregiver({ navigation }) {
                 }}
                 placeholder="자기소개글을 입력해주세요."
                 numberOfLines={10}
+                multiline={true}
               />
             </FormBox>
 

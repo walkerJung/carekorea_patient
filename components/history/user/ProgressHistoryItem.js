@@ -209,10 +209,12 @@ export default function Item({ onPress, item, copyToClipboard, navigation }) {
               </ListTxtColor>
               <ClipboardBtn
                 activeOpacity={0.8}
-                onPress={() => copyToClipboard("농협 123-12345678-12")}
+                onPress={() => copyToClipboard("하나은행 68991001554704")}
               >
                 <FlexBoth>
-                  <Text style={{ fontSize: 15 }}>농협 123-12345678-12</Text>
+                  <Text style={{ fontSize: 15 }}>
+                    하나은행 689-910015-54704
+                  </Text>
                   <ClipSpan>
                     <Text style={{ fontSize: 13 }}>
                       <Icon
@@ -224,7 +226,10 @@ export default function Item({ onPress, item, copyToClipboard, navigation }) {
                     </Text>
                   </ClipSpan>
                 </FlexBoth>
-                <Text style={{ opacity: 0.4, marginTop: 3 }}>
+                <Text style={{ opacity: 0.4, fontSize: 12 }}>
+                  주식회사 케어코리아
+                </Text>
+                <Text style={{ opacity: 0.7, marginTop: 3 }}>
                   입금이 확인되면 매칭이 완료됩니다.
                 </Text>
               </ClipboardBtn>

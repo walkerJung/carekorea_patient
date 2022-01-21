@@ -673,6 +673,7 @@ export default function CaregiverRegister({ navigation }) {
             style={{ height: 100, textAlignVertical: "top", fontSize: 15 }}
             placeholder="자기소개글을 입력해주세요."
             numberOfLines={10}
+            multiline={true}
             onChangeText={(text) => {
               setValue("introduce", text);
             }}

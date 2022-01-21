@@ -41,13 +41,14 @@ const ModalBackground = styled.View`
 const Container = styled.View`
   width: 100%;
   background-color: #fff;
-  padding: 20px 20px;
+  padding: 20px 0px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 `;
 const ModalHeader = styled.View`
   position: relative;
   height: 50px;
+  padding: 0px 20px;
 `;
 const ModalHeaderTxt = styled.Text`
   color: ${careTheme.COLORS.BLUE};
@@ -58,13 +59,14 @@ const ModalBody = styled.View``;
 
 const Exit = styled.TouchableOpacity`
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 0;
 `;
 const ScrollBox = styled.ScrollView`
   margin-top: 20px;
   margin-bottom: 20px;
   max-height: 300px;
+  padding: 0 20px;
 `;
 const InnerBox = styled.View`
   margin-bottom: 15px;
@@ -87,6 +89,7 @@ const InnerTxt = styled.Text`
 `;
 const BottomBtnBox = styled.View`
   flex-direction: row;
+  padding: 0 20px;
 `;
 const BottomBtnLeft = styled.View`
   width: 30%;
@@ -205,7 +208,7 @@ export default function ProfileModal({
               </ModalHeader>
               <ModalBody>
                 <FlexBoth>
-                  <Profile>
+                  <Profile style={{ paddingLeft: 20, paddingRight: 20 }}>
                     <ProfileImg style={{ width: 56, height: 56 }}>
                       <Image
                         style={{ width: 26, height: 26 }}

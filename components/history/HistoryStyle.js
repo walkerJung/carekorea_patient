@@ -86,9 +86,9 @@ export const Days = styled.Text`
   font-weight: bold;
 `;
 export const ClipboardBtn = styled.TouchableOpacity`
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
-  background-color: #e3f4f8;
+  background-color: #f1f1f1;
   border-radius: 4px;
   padding: 10px 12px;
   width: 100%;
@@ -102,7 +102,7 @@ export const ClipSpan = styled.View`
   padding: 2px 8px;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 99px;
 `;
