@@ -94,6 +94,7 @@ export const BtnTxt = styled.Text`
   font-weight: 300;
   text-align: center;
   color: #111;
+  line-height: 24px;
 `;
 export const Tit = styled.Text`
   font-weight: bold;

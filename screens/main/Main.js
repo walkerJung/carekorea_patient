@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, ScrollView, Alert, Image, Text } from "react-native";
+import { StyleSheet, View, Image, Platform } from "react-native";
 import DefaultLayout from "../../components/layout/DefaultLayout";
 import SectionLayout from "../../components/layout/SectionLayout";
 import {
@@ -52,7 +52,7 @@ export default function PatientMain({ navigation }) {
             </BannerBtnBox>
             <MainBannerHd />
           </MainBanner>
-          {/* <SectionLayout>
+          <SectionLayout>
             <View
               style={{
                 ...styles.shadow,
@@ -62,13 +62,17 @@ export default function PatientMain({ navigation }) {
             >
               <Btn
                 activeOpacity={0.8}
-                onPress={() => Alert.alert("서비스 준비중입니다.")}
+                onPress={() => navigation.navigate("PdfView")}
               >
                 <BtnTit>간병 서비스 신청방법</BtnTit>
-                <BtnTxt>앱 사용법을 알려드립니다!</BtnTxt>
+                <BtnTxt style={{ color: "#676767" }}>
+                  {Platform.OS === "ios"
+                    ? "신청방법 알아보기"
+                    : "신청메뉴얼 다운로드"}
+                </BtnTxt>
               </Btn>
             </View>
-          </SectionLayout> */}
+          </SectionLayout>
           <SectionLayout>
             <MainTitle>공지사항</MainTitle>
             <MainNotice data={data} navigation={navigation} />
